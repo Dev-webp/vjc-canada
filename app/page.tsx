@@ -1,6 +1,6 @@
 // app/page.tsx
 import React from 'react';
-import Landing from "./components/Landing/Landing"
+import Landing from "./canada-permanent-residency/components/Landing/Landing"
 
 
 const HomePage = () => {
