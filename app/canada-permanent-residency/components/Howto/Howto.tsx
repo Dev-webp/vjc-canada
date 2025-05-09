@@ -1,7 +1,7 @@
 'use client'; // Add this to enable animations in app router (if using it)
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+
 
 export default function CanadaPR() {
   return (
