@@ -27,7 +27,7 @@ export default function TrustedVisaSection() {
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
         >
           <p className="text-orange-600 font-semibold uppercase tracking-widest">
             Why Choose VJC Overseas

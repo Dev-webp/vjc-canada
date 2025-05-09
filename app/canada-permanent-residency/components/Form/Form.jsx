@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import Formleft from "../Formleft/Formleft";
 
 const Form = () => {
   const [name, setName] = useState('');
@@ -13,11 +13,9 @@ const Form = () => {
   const [qualification, setQualification] = useState('');
   const [country, setCountry] = useState('');
   const [message, setMessage] = useState('');
-  const [formStatus, setFormStatus] = useState<null | 'success' | 'error'>(null);
-  const [loading, setLoading] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
 
-  const { ref, inView } = useInView({ threshold: 0.5, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     if (popupVisible) {
@@ -26,39 +24,19 @@ const Form = () => {
     }
   }, [popupVisible]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    setPopupVisible(true);
 
-    const formData = { name, email, phone, age, experience, qualification, country, message };
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setFormStatus('success');
-        setName('');
-        setEmail('');
-        setPhone('');
-        setAge('');
-        setExperience('');
-        setQualification('');
-        setCountry('');
-        setMessage('');
-        setPopupVisible(true);
-      } else {
-        setFormStatus('error');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setFormStatus('error');
-    } finally {
-      setLoading(false);
-    }
+    // Clear form
+    setName('');
+    setEmail('');
+    setPhone('');
+    setAge('');
+    setExperience('');
+    setQualification('');
+    setCountry('');
+    setMessage('');
   };
 
   return (
@@ -67,33 +45,9 @@ const Form = () => {
       className="w-full py-10 px-4 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url(/assets/formbg.png)' }}
     >
-      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl  overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
         {/* Left content with animation */}
-        <motion.div
-          initial={{ opacity: 0, x: -100 }}
-          animate={inView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="flex flex-col text-left p-8 space-y-4 bg-white/70"
-        >
-          <h2 className="text-3xl font-bold text-orange-600">
-            Canada Permanent Residence Visa
-          </h2>
-          <Image
-            src="/assets/formimg.png"
-            alt="Assessment"
-            width={450}
-            height={160}
-            className="rounded-md shadow-md"
-          />
-          <p className="text-gray-700 text-base">
-            Canada offers one of the most welcoming environments for immigrants worldwide, and obtaining a
-            Permanent Residence (PR) Visa is a life-changing opportunity. At{' '}
-            <span className="text-orange-600">VJC Overseas</span>, we specialize in helping individuals and families
-            navigate the complexities of Canada’s immigration process and successfully secure their PR. With its high
-            quality of life, excellent healthcare and education systems, and abundant job opportunities, Canada promises
-            a future full of possibilities.
-          </p>
-        </motion.div>
+        <Formleft inView={inView} />
 
         {/* Right Form with animation */}
         <motion.div
@@ -102,11 +56,11 @@ const Form = () => {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           className="p-6 md:p-10"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-center text-sky-800 mb-10">
             Sign up <span className="text-red-600">&</span> Get Free Assessment
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-8">
             <input type="text" name="name" placeholder="Your Name" required
               className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               value={name} onChange={(e) => setName(e.target.value)} />
@@ -147,8 +101,8 @@ const Form = () => {
               value={qualification} onChange={(e) => setQualification(e.target.value)}>
               <option value="">Select your qualification</option>
               <option value="High School">High School</option>
-              <option value="Bachelor's Degree">Bachelor&apos;s Degree</option>
-              <option value="Master's Degree">Master&apos;s Degree</option>
+              <option value="Bachelor's Degree">Bachelor's Degree</option>
+              <option value="Master's Degree">Master's Degree</option>
               <option value="Ph.D.">Ph.D.</option>
               <option value="Diploma">Diploma</option>
             </select>
@@ -159,14 +113,9 @@ const Form = () => {
 
             <button
               type="submit"
-              disabled={loading}
               className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 rounded-md font-semibold transition-all duration-200 shadow-md"
             >
-              {formStatus === 'success'
-                ? 'Form Submitted!'
-                : loading
-                  ? 'Submitting...'
-                  : 'Submit for Free Assessment'}
+              Submit for Free Assessment
             </button>
           </form>
 

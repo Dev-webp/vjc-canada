@@ -42,7 +42,7 @@ const Passport = () => {
   useEffect(() => {
     const slideInterval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slidesData.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(slideInterval);
   }, []);
 
@@ -56,7 +56,7 @@ const Passport = () => {
           <motion.div
             key={currentSlide}
             className="w-full md:flex items-center gap-10"
-            initial={{ opacity: 0, x: 100 }}
+            initial={{ opacity: 0, x: 150 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.8 }}

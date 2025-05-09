@@ -5,6 +5,8 @@ import { Autoplay, EffectCoverflow } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const canadaVisaSlides = [
   {
@@ -35,8 +37,17 @@ const canadaVisaSlides = [
 ];
 
 const CanadaVisaSection = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   return (
-    <section
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="py-20 px-4 text-center bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url('/assets/slidebg.png')` }}
     >
@@ -68,8 +79,8 @@ const CanadaVisaSection = () => {
             slideShadows: false,
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1.2,
+            320: {
+              slidesPerView: 1,
             },
             768: {
               slidesPerView: 2.2,
@@ -90,8 +101,6 @@ const CanadaVisaSection = () => {
                   height={400}
                   className="object-cover w-full h-full"
                 />
-
-                {/* Only the content area gets bg-black/50 */}
                 <div className="absolute bottom-0 left-0 w-full bg-black/50 text-white p-6">
                   <h3 className="text-xl font-bold mb-2">{slide.title}</h3>
                   <p className="text-sm">{slide.desc}</p>
@@ -101,7 +110,7 @@ const CanadaVisaSection = () => {
           ))}
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
