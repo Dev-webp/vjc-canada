@@ -10,7 +10,8 @@ export default function CanadaPR() {
       style={{ backgroundImage: "url(/assets/flag.png)" }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/10 z-0" />
+      <div className="absolute inset-0 bg-[rgba(254,246,242,0.4)] z-0" />
+
 
       <div className="container mx-auto text-white relative px-4 md:px-12 lg:px-32 z-10 py-10">
         <motion.h1

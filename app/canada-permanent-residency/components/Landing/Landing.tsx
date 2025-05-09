@@ -9,6 +9,7 @@ import Form from "../Form/Form"
 import Whychoose from '../Whychoose/Whychoose'
 import Howto from "../Howto/Howto"
 import Process from "../Processsuccess/Processsuccess"
+import Requirements from "../Requirements/Requirements"
 
 const Landing = () => {
   return (
@@ -18,6 +19,7 @@ const Landing = () => {
       <TrustedVisa></TrustedVisa>
       <Howto></Howto>
       <Process></Process>
+      <Requirements></Requirements>
       <Collabration></Collabration>
       <Passport></Passport>
       <Review></Review>
