@@ -5,7 +5,7 @@ import Link from "next/link";
 const Passport = () => {
   return (
     <motion.div
-      className="relative w-full h-52 lg:px-32 bg-cover bg-center"
+      className="relative w-full h-52 mb-20 lg:px-32 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/passports.png')" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

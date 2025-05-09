@@ -48,7 +48,7 @@ const Passport = () => {
 
   return (
     <div
-      className="w-full py-16 bg-cover bg-center bg-no-repeat flex justify-center items-center"
+      className="w-full pb-16 bg-cover bg-center bg-no-repeat flex justify-center items-center"
       style={{ backgroundImage: "url('/assets/review.png')" }}
     >
       <div className="w-full max-w-6xl px-6 md:flex items-center gap-10">

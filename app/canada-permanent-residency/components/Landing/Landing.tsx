@@ -7,6 +7,8 @@ import Review from "../Review/Review"
 import CanadaSection from '../CanadaSection/CanadaSection'
 import Form from "../Form/Form"
 import Whychoose from '../Whychoose/Whychoose'
+import Howto from "../Howto/Howto"
+import Process from "../Processsuccess/Processsuccess"
 
 const Landing = () => {
   return (
@@ -14,6 +16,8 @@ const Landing = () => {
       <BigVideo></BigVideo>
       <Form></Form>
       <TrustedVisa></TrustedVisa>
+      <Howto></Howto>
+      <Process></Process>
       <Collabration></Collabration>
       <Passport></Passport>
       <Review></Review>
