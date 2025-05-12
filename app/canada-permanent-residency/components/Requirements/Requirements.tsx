@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function CanadaPRRequirements() {
   return (
@@ -13,19 +14,31 @@ export default function CanadaPRRequirements() {
       </p>
 
       <div className="flex flex-col md:flex-row items-center gap-10">
-        {/* Image section */}
-        <div className="w-full md:w-1/2">
+        {/* Image section with motion */}
+        <motion.div
+          className="w-full md:w-1/2"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+        >
           <Image
-            src="/canada-pr-illustration.png" // replace with your image
+            src="/assets/require.png"
             alt="Canada PR"
             width={500}
             height={500}
-            className="mx-auto"
+            className="mx-auto rounded-2xl h-full shadow-2xl"
           />
-        </div>
+        </motion.div>
 
-        {/* Requirements section */}
-        <div className="w-full md:w-1/2 space-y-6">
+        {/* Requirements section with motion */}
+        <motion.div
+          className="w-full md:w-1/2 space-y-6"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+        >
           {[
             {
               title: 'Education (Up to 25 Points)',
@@ -68,7 +81,14 @@ export default function CanadaPRRequirements() {
               icon: '🧳'
             }
           ].map((section, index) => (
-            <div key={index} className="bg-white rounded-xl shadow p-4">
+            <motion.div
+              key={index}
+              className="bg-white rounded-xl shadow p-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
               <h3 className="font-bold text-lg mb-1 flex items-center">
                 <span className="text-2xl mr-2">{section.icon}</span>
                 {section.title}
@@ -78,9 +98,9 @@ export default function CanadaPRRequirements() {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

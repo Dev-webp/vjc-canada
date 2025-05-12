@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Formleft from "../Formleft/Formleft";
-import { Typewriter } from "react-simple-typewriter";
+
 
 const Form = () => {
   const [name, setName] = useState("");
