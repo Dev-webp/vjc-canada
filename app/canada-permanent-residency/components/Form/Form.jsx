@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import Formleft from "../Formleft/Formleft";
 
-
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -46,16 +45,18 @@ const Form = () => {
       className="w-full py-10 px-4 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/assets/formbg.png)" }}
     >
-      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl overflow-hidden flex flex-col-reverse md:flex-row">
         {/* Left content with animation */}
-        <Formleft inView={inView} />
+        <div className="w-full md:w-1/2">
+          <Formleft inView={inView} />
+        </div>
 
         {/* Right Form with animation */}
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={inView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-           className="p-6 md:p-10 bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300"
+          className="w-full md:w-1/2 p-6 md:p-10 bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-center text-sky-800 mb-10">
             Sign up <span className="text-red-600">&</span> Get{" "}
