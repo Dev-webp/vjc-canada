@@ -8,37 +8,37 @@ export default function ProcessSection() {
       id: '01',
       title: 'Profile Evaluation',
       description: 'We begin by thoroughly analyzing your education, work experience, and language proficiency to determine your eligibility under Canada’s PR programs.',
-      image: '/assets/process/process1.png',
+      image: '/assets/canadapr/process/process1.png',
     },
     {
       id: '02',
       title: 'Counseling and Planning',
       description: 'Based on your profile, we guide you on the most suitable PR stream such as Express Entry, PNP, or others. Our expert counselors help you plan your migration path strategically.',
-      image: '/assets/process/process2.png',
+      image: '/assets/canadapr/process/process2.png',
     },
     {
       id: '03',
       title: 'Documentation Support',
       description: 'We assist in gathering, organizing, and verifying all necessary documents, including educational credentials, work experience letters, and language test results.',
-      image: '/assets/process/process3.png',
+      image: '/assets/canadapr/process/process3.png',
     },
     {
       id: '04',
       title: 'Application Submission',
       description: 'Once your profile and documents are ready, we submit your application accurately through the appropriate Canada immigration portals such as Express Entry or PNP portals.',
-      image: '/assets/process/process4.png',
+      image: '/assets/canadapr/process/process4.png',
     },
     {
       id: '05',
       title: 'Follow-Up & Updates',
       description: 'We constantly track your application progress, respond to government queries, and keep you informed about every milestone and document request.',
-      image: '/assets/process/process5.png',
+      image: '/assets/canadapr/process/process5.png',
     },
     {
       id: '06',
       title: 'Visa Approval & Pre-departure',
       description: 'After your visa approval, we provide you with pre-departure guidance covering travel, accommodation, and integration tips to make your transition to Canada smooth and stress-free.',
-      image: '/assets/process/process6.png',
+      image: '/assets/canadapr/process/process6.png',
     }
   ];
 

@@ -11,7 +11,7 @@ export default function TrustedVisaSection() {
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
         <div className="relative w-full h-full">
           <Image
-            src="/assets/trustedbg.png"
+            src="/assets/canadapr/trustedbg.png"
             alt="Earth Background"
             fill
             className="object-left-top object-contain"
@@ -86,7 +86,7 @@ export default function TrustedVisaSection() {
         >
           <div className="relative w-full max-w-[550px] h-[300px] md:h-[500px] rounded-lg overflow-hidden">
             <Image
-              src="/assets/trustedfamily.png"
+              src="/assets/canadapr/trustedfamily.png"
               alt="Happy PR Clients"
               fill
               className="object-cover z-30"

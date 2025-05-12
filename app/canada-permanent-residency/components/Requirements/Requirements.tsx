@@ -23,7 +23,7 @@ export default function CanadaPRRequirements() {
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <Image
-            src="/assets/require.png"
+            src="/assets/canadapr/require.png"
             alt="Canada PR"
             width={500}
             height={500}

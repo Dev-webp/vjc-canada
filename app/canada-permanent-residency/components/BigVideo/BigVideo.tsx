@@ -5,7 +5,7 @@ import { useInView } from "framer-motion";
 import Link from "next/link";
 
 const video = {
-  src: "/assets/Landing/video1.mp4",
+  src: "/assets/canadapr/Landing/video1.mp4",
   title: "Achieve Your Dream Life in Canada with VJC Overseas",
   subtitle: "Expert guidance and seamless processing for Canada PR Visas.",
   isVideo: true,
@@ -41,7 +41,7 @@ export default function HeroSection() {
   }, [isInView, controls]);
 
   return (
-    <div className="relative min-h-[120vh] w-full overflow-hidden">
+    <div className="relative min-h-[120vh] w-full bg-white overflow-hidden">
       {/* Video and Content Section */}
       <div className="absolute inset-x-0 top-0 h-[90vh]">
         <motion.div

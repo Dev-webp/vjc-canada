@@ -7,7 +7,7 @@ export default function CanadaPR() {
   return (
     <div
       className="relative h-full bg-cover bg-center"
-      style={{ backgroundImage: "url(/assets/flag.png)" }}
+      style={{ backgroundImage: "url(/assets/canadapr/flag.png)" }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-[rgba(254,246,242,0.1)] z-0" />

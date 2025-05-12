@@ -79,7 +79,7 @@ const Form = () => {
             `}</style>
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-8 text-gray-900">
             <input
               type="text"
               name="name"

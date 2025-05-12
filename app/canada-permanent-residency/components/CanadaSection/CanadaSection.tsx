@@ -12,27 +12,27 @@ const canadaVisaSlides = [
   {
     title: "Why Choose Canada?",
     desc: "Canada offers high quality of life, free healthcare, and world-class education.",
-    image: "/assets/slides/slide1.png",
+    image: "/assets/canadapr/slides/slide1.png",
   },
   {
     title: "Express Entry Program",
     desc: "Fast-track immigration system for skilled workers based on CRS score.",
-    image: "/assets/slides/slide2.png",
+    image: "/assets/canadapr/slides/slide2.png",
   },
   {
     title: "Eligibility Criteria",
     desc: "Age, education, work experience, and English/French proficiency are key factors.",
-    image: "/assets/slides/slide3.png",
+    image: "/assets/canadapr/slides/slide3.png",
   },
   {
     title: "Step-by-Step Process",
     desc: "Create an Express Entry profile, get ITA, submit documents, and receive PR.",
-    image: "/assets/slides/slide4.png",
+    image: "/assets/canadapr/slides/slide4.png",
   },
   {
     title: "How VJC Overseas Helps",
     desc: "We guide you through documentation, profile building, and interview preparation.",
-    image: "/assets/slides/slide5.png",
+    image: "/assets/canadapr/slides/slide5.png",
   },
 ];
 
@@ -49,7 +49,7 @@ const CanadaVisaSection = () => {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="py-20 px-4 text-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('/assets/slidebg.png')` }}
+      style={{ backgroundImage: `url('/assets/canadapr/slidebg.png')` }}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4 drop-shadow-lg">
         Canada PR Visa Information

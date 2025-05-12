@@ -16,7 +16,7 @@ export default function StudyInUK() {
         >
           <div className="clip-left relative w-full h-full">
             <Image
-              src="/assets/collab.png"
+              src="/assets/canadapr/collab.png"
               alt="Study in UK"
               fill
               className="object-cover"

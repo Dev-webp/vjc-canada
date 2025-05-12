@@ -15,7 +15,7 @@ const FormLeft = ({ inView }) => {
         Canada Permanent Residence Visa
       </h2>
       <Image
-        src="/assets/formimg.png"
+        src="/assets/canadapr/formimg.png"
         alt="Assessment"
         width={450}
         height={160}

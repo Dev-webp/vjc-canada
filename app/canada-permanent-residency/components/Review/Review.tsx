@@ -5,31 +5,31 @@ import Image from "next/image";
 
 const slidesData = [
   {
-    image: "/assets/Reviews/review1.png",
+    image: "/assets/canadapr/Reviews/review1.png",
     content: "This is the best Canada PR visa service. Highly recommended!",
     author: "John Doe",
     title: "PR Applicant"
   },
   {
-    image: "/assets/Reviews/review2.png",
+    image: "/assets/canadapr/Reviews/review2.png",
     content: "Fantastic experience with VJC Overseas. Professional and efficient!",
     author: "Jane Smith",
     title: "Student Visa"
   },
   {
-    image: "/assets/Reviews/review3.png",
+    image: "/assets/canadapr/Reviews/review3.png",
     content: "The Canada PR process was smooth, thanks to VJC Overseas!",
     author: "Alex Brown",
     title: "Skilled Worker"
   },
   {
-    image: "/assets/Reviews/review4.png",
+    image: "/assets/canadapr/Reviews/review4.png",
     content: "Great support team and timely updates. I felt confident throughout the process!",
     author: "Emily Clark",
     title: "Visitor Visa"
   },
   {
-    image: "/assets/Reviews/review5.png",
+    image: "/assets/canadapr/Reviews/review5.png",
     content: "Excellent guidance from start to finish. Highly trustworthy agency!",
     author: "Michael Lee",
     title: "Investor Program"
@@ -49,7 +49,7 @@ const Passport = () => {
   return (
     <div
       className="w-full pb-16 bg-cover bg-center bg-no-repeat flex justify-center items-center"
-      style={{ backgroundImage: "url('/assets/review.png')" }}
+      style={{ backgroundImage: "url('/assets/canadapr/review.png')" }}
     >
       <div className="w-full max-w-6xl px-6 md:flex items-center gap-10">
         <AnimatePresence mode="wait">
