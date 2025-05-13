@@ -74,7 +74,7 @@ export default function ProcessSection() {
               className="md:w-1/2 text-left"
             >
               <p className="text-sm font-bold text-gray-700">{step.id}</p>
-              <h3 className="text-xl lg:text-3xl font-bold text-sky-700 mt-2">{step.title}</h3>
+              <h3 className="text-xl lg:text-3xl font-bold text-orange-600 mt-2">{step.title}</h3>
               <p className="text-gray-600 mt-4">{step.description}</p>
             </motion.div>
 

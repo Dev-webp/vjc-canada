@@ -29,10 +29,10 @@ export default function TrustedVisaSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
         >
-          <p className="text-orange-600 font-semibold uppercase tracking-widest">
+          <p className="text-sky-800 font-semibold uppercase tracking-widest">
             Why Choose VJC Overseas
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-sky-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-orange-600">
             Trusted Canada PR & Immigration Experts
           </h2>
           <p className="text-gray-600">

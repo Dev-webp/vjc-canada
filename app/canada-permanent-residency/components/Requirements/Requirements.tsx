@@ -34,7 +34,7 @@ export default function CanadaPRRequirements() {
 
         {/* Requirements section with motion */}
         <motion.div
-          className="w-full md:w-1/2 space-y-6"
+          className="w-full md:w-1/2 space-y-6 "
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -85,7 +85,7 @@ export default function CanadaPRRequirements() {
           ].map((section, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow p-4"
+              className="bg-white rounded-xl shadow p-4 hover:bg-orange-200"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

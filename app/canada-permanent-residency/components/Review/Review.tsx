@@ -6,32 +6,32 @@ import Image from "next/image";
 const slidesData = [
   {
     image: "/assets/canadapr/Reviews/review1.png",
-    content: "This is the best Canada PR visa service. Highly recommended!",
-    author: "John Doe",
-    title: "PR Applicant"
+    content: "The team at VJC Overseas Bangalore made my dream of studying in the UK a reality. Their guidance and support in securing my education visa were invaluable. I’m so grateful for their help and would recommend them to anyone looking to study abroad.",
+    author: "Kavya mopuri",
+    title: "UK Study Visa"
   },
   {
-    image: "/assets/canadapr/Reviews/review2.png",
-    content: "Fantastic experience with VJC Overseas. Professional and efficient!",
-    author: "Jane Smith",
+    image: "/assets/canadapr/Reviews/review4.png",
+    content: "VJC Overseas Bangalore is the best immigration consultancy I’ve come across. Their team made my permanent residency application process for Australia so simple and hassle-free. I couldn’t be happier with their service!",
+    author: "Rohit Naidu",
     title: "Student Visa"
   },
   {
     image: "/assets/canadapr/Reviews/review3.png",
-    content: "The Canada PR process was smooth, thanks to VJC Overseas!",
-    author: "Alex Brown",
+    content: "As someone who was completely new to the study abroad application process, I was so grateful for the support I received from VJC Overseas. They guided me through every step, helping me secure my education visa without any complications. I highly recommend their services!",
+    author: "Monisha Vijaykumar",
     title: "Skilled Worker"
   },
   {
-    image: "/assets/canadapr/Reviews/review4.png",
-    content: "Great support team and timely updates. I felt confident throughout the process!",
-    author: "Emily Clark",
-    title: "Visitor Visa"
+    image: "/assets/canadapr/Reviews/review2.png",
+    content: "had an amazing experience with VJC Overseas Bangalore. They helped me with my Australia immigration process, and everything went smoothly from start to finish. Their expertise and dedication are unmatched.",
+    author: "Sai Preethi",
+    title: "Australia Immigration"
   },
   {
     image: "/assets/canadapr/Reviews/review5.png",
-    content: "Excellent guidance from start to finish. Highly trustworthy agency!",
-    author: "Michael Lee",
+    content: "Excellent work! I would like to thank VJC Overseas help me getting my study visa extension and would highly recommend to everyone to consult with VJC Overseas for visa processes. The whole team is very competitive and helpful.",
+    author: "Hanish Mj",
     title: "Investor Program"
   }
 ];
