@@ -43,7 +43,7 @@ export default function ProcessSection() {
   ];
 
   return (
-   <div className="relative w-full px-8 md:px-16 tracking-wider lg:px-32 py-16 mt-10 bg-gradient-to-b bg-orange-50">
+   <div className="relative w-full px-8 md:px-16 tracking-wider lg:px-32 py-14 mt-10 bg-gradient-to-b bg-orange-50">
       <motion.div 
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: 1, y: 0 }} 
@@ -56,7 +56,7 @@ export default function ProcessSection() {
         
       </motion.div>
 
-      <div className="space-y-16">
+      <div className="space-y-14">
         {steps.map((step, index) => (
           <motion.div 
             key={step.id}
@@ -64,7 +64,7 @@ export default function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className={`flex flex-col md:flex-row items-center gap-8 md:gap-16 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+            className={`flex flex-col md:flex-row items-center gap-8 md:gap-10 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
           >
             <motion.div 
               initial={{ opacity: 0, x: -50 }} 

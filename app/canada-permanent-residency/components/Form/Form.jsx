@@ -42,7 +42,7 @@ const Form = () => {
   return (
     <section
       ref={ref}
-      className="w-full py-10 px-4 bg-white bg-cover bg-center bg-no-repeat"
+      className="w-full  py-10 px-4 bg-white bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/assets/canadapr/formbg1.png)" }}
     >
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl overflow-hidden flex flex-col-reverse md:flex-row">

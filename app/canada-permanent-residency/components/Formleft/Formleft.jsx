@@ -8,7 +8,7 @@ const FormLeft = ({ inView }) => {
       initial={{ opacity: 0, x: -100 }}
       animate={inView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="flex flex-col text-left p-8 space-y-6 bg-white/70"
+      className="flex flex-col text-left px-4 py-8 md:p-8 space-y-6 bg-white/70"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-orange-600">
         Work in Canada with Canada PR Visa

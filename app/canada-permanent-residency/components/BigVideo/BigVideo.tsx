@@ -41,7 +41,7 @@ export default function HeroSection() {
   }, [isInView, controls]);
 
   return (
-    <div className="relative min-h-[120vh] w-full bg-white overflow-hidden">
+    <div className="relative min-h-[96vh] md:min-h-[110vh] w-full bg-white overflow-hidden">
       {/* Video and Content Section */}
       <div className="absolute inset-x-0 top-0 h-[90vh]">
         <motion.div
@@ -119,7 +119,7 @@ export default function HeroSection() {
             },
           },
         }}
-        className="relative mt-[calc(80vh+40px)] md:mt-0 md:absolute md:top-[68%] w-full hidden md:flex flex-col md:flex-row justify-center items-center gap-20 pb-20 px-6"
+        className="relative mt-[calc(80vh+40px)]  md:mt-0 md:absolute md:top-[68%] w-full hidden md:flex flex-col md:flex-row justify-center items-center gap-20 pb-20 px-6"
       >
         {[
           {
