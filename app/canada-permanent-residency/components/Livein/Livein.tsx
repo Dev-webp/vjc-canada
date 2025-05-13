@@ -64,16 +64,16 @@ const Livein = () => {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-4xl font-extrabold text-orange-600"
+          className=" text-3xl md:text-4xl font-extrabold text-orange-600"
         >
-          Live in Canada with Canada Permanent Residence Visa
+          Live in Canada with Canada <span className="text-sky-700">Permanent Residence</span> Visa
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
           className="max-w-2xl mx-auto text-lg text-gray-700"
         >
-          Live the Life You Deserve – In Canada, With a PR Visa!
+          <b>Live the Life You Deserve – In Canada, With a PR Visa!</b>
           <br />
           Dreaming of a life where opportunity meets peace of mind? With a
           Canada Permanent Residence Visa, you&apos;re not just moving—you’re
