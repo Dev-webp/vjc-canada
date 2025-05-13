@@ -14,6 +14,23 @@ const benefits = [
   "A Clear Path to Citizenship",
 ];
 
+// Descriptions array kept outside to avoid re-declaration
+const descriptions = [
+  "From vibrant cities like Toronto & Vancouver to peaceful, nature-rich towns—you choose your home.",
+  "Experience true multicultural living in a country that celebrates inclusion and equality for all.",
+  "Enjoy universal health coverage for you and your family—no extra cost, no worries.",
+  "Give your kids the best start with access to Canada’s top-rated public schools.",
+  "Clean air, scenic beauty, low crime, and a strong social system—it’s more than a move, it’s a fresh start.",
+  "Live, work, study, and buy property like a Canadian citizen. PR gives you nearly all the same benefits.",
+  "Canada PR lets you sponsor your spouse, children, and even parents for a united future.",
+  "Live in Canada for just 3 years to become eligible for citizenship—and a powerful passport!",
+];
+
+// ✅ Helper function with safe typing and fallback
+function getBenefitDescription(index: number): string {
+  return descriptions[index] || "Benefit description coming soon.";
+}
+
 const Livein = () => {
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -68,9 +85,9 @@ const Livein = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-6 bg-white  shadow-lg rounded-xl border-l-4 border-orange-500"
+              className="p-6 bg-white shadow-lg rounded-xl border-l-4 border-orange-500 hover:bg-orange-200"
             >
-              <h3 className="text-xl font-bold mb-2 text-sky-700">
+              <h3 className="text-xl font-bold mb-2 text-sky-700 ">
                 {benefit}
               </h3>
               <p className="text-gray-600">
@@ -91,20 +108,5 @@ const Livein = () => {
     </section>
   );
 };
-
-// Helper function to return matching description
-function getBenefitDescription(index) {
-  const descriptions = [
-    "From vibrant cities like Toronto & Vancouver to peaceful, nature-rich towns—you choose your home.",
-    "Experience true multicultural living in a country that celebrates inclusion and equality for all.",
-    "Enjoy universal health coverage for you and your family—no extra cost, no worries.",
-    "Give your kids the best start with access to Canada’s top-rated public schools.",
-    "Clean air, scenic beauty, low crime, and a strong social system—it’s more than a move, it’s a fresh start.",
-    "Live, work, study, and buy property like a Canadian citizen. PR gives you nearly all the same benefits.",
-    "Canada PR lets you sponsor your spouse, children, and even parents for a united future.",
-    "Live in Canada for just 3 years to become eligible for citizenship—and a powerful passport!",
-  ];
-  return descriptions[index];
-}
 
 export default Livein;
