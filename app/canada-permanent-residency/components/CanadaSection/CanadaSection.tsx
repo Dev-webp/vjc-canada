@@ -1,37 +1,62 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const canadaVisaSlides = [
+const canadaPRBenefits = [
   {
-    title: "Why Choose Canada?",
-    desc: "Canada offers high quality of life, free healthcare, and world-class education.",
+    title: "Freedom to Live, Work & Study Anywhere in Canada",
+    desc: "Settle in any province—from vibrant cities like Toronto to peaceful towns in Nova Scotia.",
     image: "/assets/canadapr/slides/slide1.png",
   },
   {
-    title: "Express Entry Program",
-    desc: "Fast-track immigration system for skilled workers based on CRS score.",
+    title: "World-Class Free Healthcare",
+    desc: "Access government-funded healthcare services with no extra cost.",
     image: "/assets/canadapr/slides/slide2.png",
   },
   {
-    title: "Eligibility Criteria",
-    desc: "Age, education, work experience, and English/French proficiency are key factors.",
+    title: "Free Quality Education for Children",
+    desc: "PR holders’ children enjoy free public education up to grade 12.",
     image: "/assets/canadapr/slides/slide3.png",
   },
   {
-    title: "Step-by-Step Process",
-    desc: "Create an Express Entry profile, get ITA, submit documents, and receive PR.",
+    title: "Family Sponsorship Made Easy",
+    desc: "Bring your spouse, children, and even parents to join your Canadian journey.",
     image: "/assets/canadapr/slides/slide4.png",
   },
   {
-    title: "How VJC Overseas Helps",
-    desc: "We guide you through documentation, profile building, and interview preparation.",
+    title: "No Job Offer Needed to Apply",
+    desc: "Many immigration streams like Express Entry don’t require a job offer.",
+    image: "/assets/canadapr/slides/slide5.png",
+  },
+  {
+    title: "Travel Visa-Free to Over 25 Countries (After Citizenship)",
+    desc: "Canada offers a clear path to citizenship, unlocking powerful passport privileges.",
+    image: "/assets/canadapr/slides/slide1.png",
+  },
+  {
+    title: "Access to Social Security Benefits",
+    desc: "Receive unemployment support, pension plans, and child care benefits.",
+    image: "/assets/canadapr/slides/slide2.png",
+  },
+  {
+    title: "Own Property & Start a Business Freely",
+    desc: "Enjoy the same legal rights as citizens when it comes to investing or starting a venture.",
+    image: "/assets/canadapr/slides/slide3.png",
+  },
+  {
+    title: "Safe, Peaceful & Inclusive Society",
+    desc: "Live in one of the world’s safest and most multicultural countries.",
+    image: "/assets/canadapr/slides/slide4.png",
+  },
+  {
+    title: "Quick Citizenship Eligibility – Just 3 Years of Residency",
+    desc: "Become eligible to apply for citizenship after just 3 years of living in Canada.",
     image: "/assets/canadapr/slides/slide5.png",
   },
 ];
@@ -52,25 +77,27 @@ const CanadaVisaSection = () => {
       style={{ backgroundImage: `url('/assets/canadapr/slidebg.png')` }}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-orange-600 mb-4 drop-shadow-lg">
-        Canada PR Visa Information
+        Canada Permanent Residency Visa Benefits
       </h2>
       <p className="text-gray-800 max-w-2xl mx-auto mb-12 drop-shadow-md">
-        Learn everything you need to know about Canada Permanent Residency and
-        how VJC Overseas can help.
+        Discover the top reasons why becoming a Canadian Permanent Resident is a
+        life-changing opportunity.
       </p>
 
       <div className="max-w-6xl mx-auto">
         <Swiper
-          modules={[Autoplay, EffectCoverflow]}
+          modules={[EffectCoverflow, Mousewheel]}
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
+          slidesPerView={3} // Make sure it's an integer here (avoid 2.2)
+          mousewheel={{
+            forceToAxis: true,
+            sensitivity: 1,
+            releaseOnEdges: true,
+            thresholdDelta: 10, // 🔥 Important to limit to 1 slide per scroll
           }}
-          slidesPerView={3}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
@@ -83,7 +110,7 @@ const CanadaVisaSection = () => {
               slidesPerView: 1,
             },
             768: {
-              slidesPerView: 2.2,
+              slidesPerView: 2,
             },
             1024: {
               slidesPerView: 3,
@@ -91,7 +118,7 @@ const CanadaVisaSection = () => {
           }}
           className="visa-swiper"
         >
-          {canadaVisaSlides.map((slide, index) => (
+          {canadaPRBenefits.map((slide, index) => (
             <SwiperSlide key={index} className="custom-slide">
               <div className="relative rounded-xl shadow-xl overflow-hidden w-[350px] md:w-[400px] mx-auto h-[420px]">
                 <Image

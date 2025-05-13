@@ -11,7 +11,7 @@ const WhyChooseVJC = () => {
   });
 
   return (
-    <section className="w-full py-16 px-4 bg-white" ref={ref}>
+    <section className="w-full py-16 px-4 bg-orange-100" ref={ref}>
       <motion.div
         initial={{ opacity: 0, y: 200 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}

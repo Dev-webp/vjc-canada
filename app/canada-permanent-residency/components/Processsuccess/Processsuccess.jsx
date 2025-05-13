@@ -43,9 +43,7 @@ export default function ProcessSection() {
   ];
 
   return (
-    <div className="relative w-full px-8 md:px-16 tracking-wider lg:px-32  py-16 mt-10 bg-white">
-     
-
+   <div className="relative w-full px-8 md:px-16 tracking-wider lg:px-32 py-16 mt-10 bg-gradient-to-b bg-orange-50">
       <motion.div 
         initial={{ opacity: 0, y: -50 }} 
         animate={{ opacity: 1, y: 0 }} 

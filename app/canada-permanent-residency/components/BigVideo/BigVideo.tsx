@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const video = {
   src: "/assets/canadapr/Landing/video1.mp4",
-  title: "Achieve Your Dream Life in Canada with VJC Overseas",
+  title: "Work, Live & Settle in Canada with Canada PR Visa - Apply Now",
   subtitle: "Expert guidance and seamless processing for Canada PR Visas.",
   isVideo: true,
 };
@@ -119,7 +119,7 @@ export default function HeroSection() {
             },
           },
         }}
-        className="relative mt-[calc(80vh+40px)] md:mt-0 md:absolute md:top-[68%] w-full flex flex-col md:flex-row justify-center items-center gap-20 pb-20 px-6"
+        className="relative mt-[calc(80vh+40px)] md:mt-0 md:absolute md:top-[68%] w-full hidden md:flex flex-col md:flex-row justify-center items-center gap-20 pb-20 px-6"
       >
         {[
           {

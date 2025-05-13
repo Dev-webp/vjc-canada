@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function CanadaPR() {
   return (
     <div
-      className="relative h-full bg-cover bg-center"
+      className="relative bg-white h-full bg-cover bg-center"
       style={{ backgroundImage: "url(/assets/canadapr/flag.png)" }}
     >
       {/* Dark overlay */}

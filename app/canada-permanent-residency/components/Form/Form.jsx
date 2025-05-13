@@ -42,8 +42,8 @@ const Form = () => {
   return (
     <section
       ref={ref}
-      className="w-full py-10 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url(/assets/formbg.png)" }}
+      className="w-full py-10 px-4 bg-white bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/assets/canadapr/formbg.png)" }}
     >
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-md rounded-xl overflow-hidden flex flex-col-reverse md:flex-row">
         {/* Left content with animation */}
@@ -58,7 +58,7 @@ const Form = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           className="w-full md:w-1/2 p-6 md:p-10 bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-center text-sky-800 mb-10">
+          <h2 className="text-2xl md:text-3xl px-4 font-bold text-center text-sky-800 mb-10">
             Sign up <span className="text-red-600">&</span> Get{" "}
             <span
               className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800"
@@ -79,7 +79,7 @@ const Form = () => {
             `}</style>
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-8 text-gray-900">
+          <form onSubmit={handleSubmit} className="space-y-10 text-gray-900">
             <input
               type="text"
               name="name"
@@ -168,7 +168,7 @@ const Form = () => {
             <textarea
               name="message"
               placeholder="Your Message"
-              rows={3}
+              rows={6}
               className="w-full px-4 py-2 border border-gray-400 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none"
               value={message}
               onChange={(e) => setMessage(e.target.value)}

@@ -7,10 +7,11 @@ export default function CanadaPRRequirements() {
   return (
     <div className="bg-[#fef6f2] min-h-screen px-4 py-10 md:px-20">
       <h1 className="text-3xl lg:text-4xl text-sky-700 font-extrabold text-center mb-2">
-        CANADA PR VISA <span className="text-orange-500">REQUIREMENTS</span>
+       Eligibility Requirements for  <span className="text-orange-500">Canada PR Visa Process </span>
       </h1>
-      <p className="text-center text-lg mb-10">
-        To be eligible for Canada PR, you need to score at least 67 points out of 100 under the FSWP points grid.
+      <p className='font-bold text-center mt-8'>Are You Eligible for Canada PR? Let’s Find Out! </p>
+      <p className="text-center text-lg mb-10 mt-4">
+       Canada is calling! But first—do you meet the eligibility to apply for a <b>Canada Permanent Residence (PR)</b> Visa? Here’s a quick breakdown of what you need: 
       </p>
 
       <div className="flex flex-col md:flex-row items-center gap-10">
@@ -40,46 +41,47 @@ export default function CanadaPRRequirements() {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
         >
           {[
+             {
+              title: 'Age Matters - Ideal age: 18 - 35',
+              details: ['Points decrease gradually after 35 (but you can still qualify with other strengths!) '],
+              icon: '🎯'
+            },
             {
-              title: 'Education (Up to 25 Points)',
-              details: [
-                'Points based on your highest level of education.',
-                'Maximum points for PhD or Master’s with ECA (Educational Credential Assessment).'
+              title: 'Education - Minimum : High School Diploma',
+              details: [  
+                'Higher education = more CRS (Comprehensive Ranking System) points Get bonus points for Canadian study credentials too! '
               ],
               icon: '🎓'
             },
             {
-              title: 'Language Skills (Up to 28 Points)',
+              title: 'Language Proficiency - Must take IELTS or CELPIP',
               details: [
-                '24 points for English (CLB 9 or higher gets maximum).',
-                'Additional 4 points for French as second language.'
+                'Required: CLB 7 or higher (in most programs)',
+                'Strong English or French = big boost in your score! '
               ],
               icon: '🗣️'
             },
             {
-              title: 'Work Experience (Up to 15 Points)',
+              title: 'Work Experience',
               details: [
-                'Points based on the number of years of full-time experience in NOC TEER 0, 1, 2, or 3.'
+                'Minimum 1 year of full-time skilled work (last 10 years) Overseas experience is valid—Canadian experience is even better! .'
               ],
               icon: '💼'
             },
+           
             {
-              title: 'Age (Up to 12 Points)',
-              details: ['Maximum points if you are between 18-35 years old.'],
-              icon: '🎯'
-            },
-            {
-              title: 'Arranged Employment (Up to 10 Points)',
+              title: 'CRS Score – Your Golden Ticket',
               details: ['Points if you have a valid job offer from a Canadian employer.'],
               icon: '📄'
             },
             {
-              title: 'Adaptability (Up to 10 Points)',
+              title: 'Medical & Police Clearance ',
               details: [
-                'Points for spouse’s language skills, Canadian education/work experience, or relatives in Canada.'
+                'You must be in good health and have a clean record to qualify for PR.'
               ],
-              icon: '🧳'
+              icon: '🩺'
             }
+
           ].map((section, index) => (
             <motion.div
               key={index}
@@ -98,8 +100,10 @@ export default function CanadaPRRequirements() {
                   <li key={idx}>{item}</li>
                 ))}
               </ul>
+             
             </motion.div>
           ))}
+           <p className=''>🔍 Not sure if you qualify? We can assess your profile FREE! </p>
         </motion.div>
       </div>
     </div>

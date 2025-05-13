@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function TrustedVisaSection() {
   return (
-    <section className="relative py-16 px-6 md:pl-20 md:px-16 overflow-hidden">
+    <section className="relative bg-white py-16 px-6 md:pl-20 md:px-16 overflow-hidden">
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
         <div className="relative w-full h-full">
