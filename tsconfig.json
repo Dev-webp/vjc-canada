@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/canada-permanent-residency/components/Form/Form.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/canada-permanent-residency/components/Form/Form.jsx", "app/canada-permanent-residency/components/layout.jsx"],
   "exclude": ["node_modules"]
 }
